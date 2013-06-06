@@ -1,0 +1,4 @@
+*.sublime-workspace
+bin
+obj
+_ReSharper.Watchdog
