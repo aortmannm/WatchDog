@@ -1,0 +1,44 @@
+﻿<Window x:Name="Settings1" x:Class="Watchdog.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        
+        Title="Settings" Height="349" Width="454" WindowStartupLocation="CenterScreen"
+        Icon="watchdog.ico">
+    <Grid Margin="0,0,11,9">
+
+        
+        
+        <TabControl Height="299" Margin="10,10,0,0" VerticalAlignment="Top">
+            <TabItem Header="Mail Options">
+                <Grid Background="#FFE5E5E5" Margin="0,-1,0,5">
+                    <Label Content="Set the MailTo Adress" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Set the MailFrom Adress" HorizontalAlignment="Left" Margin="10,103,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Set the SMTP Server" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Set the Mail Password" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Set the SMTP Port" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top"/>
+
+                    <TextBox x:Name="MailSmtpPortBox" HorizontalAlignment="Left" Height="23" Margin="250,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                    <TextBox x:Name="MailToBox" HorizontalAlignment="Left" Height="23" Margin="250,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                    <PasswordBox x:Name="MailPasswordBox" HorizontalAlignment="Left" Height="23" Margin="250,44,0,0" VerticalAlignment="Top" Width="160"/>
+                    <TextBox x:Name="MailSmtpServerBox" HorizontalAlignment="Left" Height="23" Margin="250,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                    <TextBox x:Name="MailFromBox" HorizontalAlignment="Left" Height="23" Margin="250,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Alarm Options">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Set the RAM Alarm Percentage" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Set the Free Disk Space Alarm Percentage" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Set the Alarm Interval in Minutes" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top"/>
+                    
+                    <TextBox x:Name="AlarmRamPercentageBox" HorizontalAlignment="Left" Height="23" Margin="250,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                    <TextBox x:Name="AlarmDiskFreeSpaceBox" HorizontalAlignment="Left" Height="23" Margin="250,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                    <TextBox x:Name="AlarmIntervalBox" HorizontalAlignment="Left" Height="23" Margin="250,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="340,270,0,0" VerticalAlignment="Top" Width="75" Click="SaveChange"/>
+        <Button Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="29,270,0,0" Click="CloseWithoutChange"/>
+
+    </Grid>
+</Window>
